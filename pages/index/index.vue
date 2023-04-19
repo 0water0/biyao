@@ -2,25 +2,31 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
-			<text class="title">{{title}}</text>
+			<text class="title">123</text>
 		</view>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
+<script setup>
+	import {getHome} from '../../apis/api_method.js'
+	let getStart = async() => {
+		let success = await getHome()
+		console.log(success);
 	}
+	getStart()
+	// export default {
+	// 	data() {
+	// 		return {
+	// 			title: 'Hello'
+	// 		}
+	// 	},
+	// 	onLoad() {
+
+	// 	},
+	// 	methods: {
+
+	// 	}
+	// }
 </script>
 
 <style>

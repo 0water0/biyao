@@ -1,15 +1,15 @@
 // 封装的请求
-module.exports = obj => {
+export default obj => {
   return new Promise((res, rej) => {
     uni.showLoading()
-    nui.request({
+    uni.request({
       ...obj,
       success: (data) => {
         uni.hideLoading()
         res(data)
       },
       fail: (err) => {
-        nui.hideLoading()
+        uni.hideLoading()
         rej(err)
       }
     })

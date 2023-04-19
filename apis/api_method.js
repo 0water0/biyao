@@ -1,13 +1,11 @@
 // 暴露的方法
-import api from './api.js'
 import axios from './axios.js'
-const baseUrl = 'http://47.113.230.184:9527'
+const baseUrl = 'http://47.113.230.184:5566'
 // 首页总览
-export function serchhot() {
-    // console.log(api.convenient);
+export const getHome = () => {
     return axios({
         method: "GET",
-        url: baseUrl + api.serchhot,
+        url: baseUrl,
     })
 }
 // 搜索

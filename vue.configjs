@@ -1,0 +1,15 @@
+module.exports = {
+	devServer:{
+		port:'8080',
+		disableHostCheck:true,
+		proxy:{
+			'/api':{
+				target:'https://h5.biyao.com',
+				changeOrigin:true,
+				pathRewrite:{
+					'^/api': '/api'
+				}
+			}
+		}
+	}
+}
