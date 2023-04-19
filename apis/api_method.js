@@ -2,6 +2,7 @@
 import axios from './axios.js'
 import api from './api'
 const baseUrl = 'http://47.113.230.184:9527/api'
+// const baseUrl = '/api'
 // 首页总览
 export const getHome = () => {
     return axios({
