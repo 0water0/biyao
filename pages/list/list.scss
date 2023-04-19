@@ -1,0 +1,89 @@
+.page {
+	position: relative;
+	padding-top: 1rpx;
+}
+.search {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 80rpx;
+	background-color: #fff;
+	border-bottom: 2px solid #ccc;
+}
+.input {
+		display: flex;
+		align-items: center;
+		width: 90%;
+		height: 80%;
+		margin: 1% auto;
+		border-radius: 30rpx;
+		background-color: #F4F4F4;
+		padding-left: 20rpx;
+		font-size: 30rpx;
+	}
+	.input input {
+		padding-left: 20rpx;
+	}
+.good {
+	position: relative;
+	display: flex;
+	margin-top: 83rpx;
+	width: 100%;
+}
+.left {
+	background-color: #F7F7F7;
+	height: 80vh;
+	width: 188rpx;
+}
+.left .item_title {
+	position: relative;
+	height: 80rpx;
+	text-align: center;
+	line-height: 80rpx;
+	padding: 10rpx 30rpx;
+	cursor: pointer;
+}
+.active {
+	background-color: #fff;
+	color: #7f4395;
+}
+.active::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 10rpx;
+	height: 50rpx;
+	background-color: #7f4395;
+}
+.right {
+	height: 80vh;
+	width: 562rpx;
+}
+.typetwo_title {
+	width: 100%;
+	text-align: center;
+}
+.type_line {
+	position: relative;
+	display: inline-block;
+	padding: 20rpx 75rpx;
+}
+.type_line::before,
+.type_line::after{
+	content: '';
+	position: absolute;
+	height: 2rpx;
+	width: 60rpx;
+	background-color: #ccc;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.type_line::before {
+	left: 0;
+}
+.type_line::after {
+	right: 0;
+}

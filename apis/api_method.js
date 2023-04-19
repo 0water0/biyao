@@ -3,7 +3,7 @@ import axios from './axios.js'
 import api from './api'
 const baseUrl = 'http://47.113.230.184:9527/api'
 // const baseUrl = '/api'
-// 首页总览
+// typeOnename一级分类名称
 export const getTypeOneName = () => {
     return axios({
         method: "GET",
@@ -14,7 +14,7 @@ export const getTypeOneName = () => {
 export const searchgood = goodname => {
     return axios({
         method: "get",
-        url: api.search + goodname,
+        url: baseUrl + api.search + goodname,
     })
 }
 // // 热销初始商品
@@ -22,7 +22,7 @@ export const homegood = () => {
     // console.log(api.convenient);
     return axios({
         method: "GET",
-        url: api.homegood,
+        url: baseUrl + api.homegood,
     })
 }
 // // 热销商品
@@ -30,14 +30,14 @@ export const hotgood = page => {
     // console.log(api.hotgoods);
     return axios({
         method: "GET",
-        url: api.hotgoods,
+        url: baseUrl + api.hotgoods,
     })
 }
 // // 每日上新
 export const newgood = () => {
     return axios({
         method: "get",
-        url: api.newList
+        url: baseUrl + api.newList
     })
 }
 // // 分类
@@ -45,7 +45,7 @@ export const newgood = () => {
 export const twogoods = onename => {
     return axios({
         method: "get",
-        url: api.goods + onename,
+        url: baseUrl + api.goods + onename,
     })
 }
 // // 二级分类商品
@@ -53,35 +53,35 @@ export const onegood = (onename, twoname) => {
     // console.log(api.onegoods + onename + '&type_two=' + twoname);
     return axios({
         method: "get",
-        url: api.onegoods + onename + '&type_two=' + twoname,
+        url: baseUrl + api.onegoods + onename + '&type_two=' + twoname,
     })
 }
 // // 商品详情
 export const gooddetail = id => {
     return axios({
         method: "get",
-        url: api.detail + id,
+        url: baseUrl + api.detail + id,
     })
 }
 // // 同类商品
 export const likethisgood = supper => {
     return axios({
         method: "get",
-        url: api.likethis + supper,
+        url: baseUrl + api.likethis + supper,
     })
 }
 // // 商家信息
 export const shopper = shopword => {
     return axios({
         method: "get",
-        url: api.shoper + shopword
+        url: baseUrl + api.shoper + shopword
     })
 }
 // // 注册
 export const registe = (a, b) => {
     return axios({
         method: 'get',
-        url: api.register,
+        url: baseUrl + api.register,
         params: {
             userName: a,
             password: b,
@@ -92,7 +92,7 @@ export const registe = (a, b) => {
 export const login = (a, b) => {
     return axios({
         method: 'get',
-        url: api.login,
+        url: baseUrl + api.login,
         params: {
             userName: a,
             password: b,
@@ -105,7 +105,7 @@ export const shopcaradd = (token, id) => {
     // console.log(api.shopadd + token + '&goodId=' + id);
     return axios({
         method: "get",
-        url: api.shopadd + token + '&goodId=' + id
+        url: baseUrl + api.shopadd + token + '&goodId=' + id
     })
 }
 // 减少
@@ -113,7 +113,7 @@ export const shopmove = (token, id) => {
     // console.log(api.shopremove + token + '&goodId=' + id);
     return axios({
         method: "get",
-        url: api.shopremove + token + '&goodId=' + id
+        url: baseUrl + api.shopremove + token + '&goodId=' + id
     })
 }
 // // 删除
@@ -121,7 +121,7 @@ export const shopdel = (token, id) => {
     // console.log(api.shopdel + token + '&goodId=' + id);
     return axios({
         method: "get",
-        url: api.shopdel + token + '&goodId=' + id
+        url: baseUrl + api.shopdel + token + '&goodId=' + id
     })
 }
 // // 购物车列表
@@ -129,6 +129,6 @@ export const shopcar = token => {
     // console.log(api.shopcar + token);
     return axios({
         method: "get",
-        url: api.shopcar + token
+        url: baseUrl +api.shopcar + token
     })
 }

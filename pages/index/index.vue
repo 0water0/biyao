@@ -8,12 +8,12 @@
 </template>
 
 <script setup>
-	import {getHome} from '../../apis/api_method.js'
-	let getStart = async() => {
-		let success = await getHome()
-		console.log(success);
-	}
-	getStart()
+	// import {getHome} from '../../apis/api_method.js'
+	// let getStart = async() => {
+	// 	let success = await getHome()
+	// 	console.log(success);
+	// }
+	// getStart()
 	// export default {
 	// 	data() {
 	// 		return {
