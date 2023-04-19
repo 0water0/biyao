@@ -4,7 +4,7 @@ import api from './api'
 const baseUrl = 'http://47.113.230.184:9527/api'
 // const baseUrl = '/api'
 // 首页总览
-export const getHome = () => {
+export const getTypeOneName = () => {
     return axios({
         method: "GET",
         url: baseUrl + api.serchhot,
