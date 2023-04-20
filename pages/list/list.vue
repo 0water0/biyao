@@ -19,8 +19,8 @@
 							<view class="type_line">{{item}}</view>
 						</view>
 						<view class="good">
-							<!-- <view class="type">
-							</view> -->
+							<view class="type">
+							</view>
 							<goods :typeonename="typeonename" :typetwoname="item"></goods>
 						</view>
 					</view>
@@ -32,41 +32,28 @@
 
 <script setup> 
 	import goods from '../../components/goods/goods.vue'
-	import {getTypeOneName, twogoods, onegood} from '../../apis/api_method.js'
+	import {getTypeOneName,twogoods,onegood} from '../apis/api_method.js'
 	import {ref} from 'vue'
 	let typeOneArr = ref([])
 	let typeTwoArr = ref([])
 	let Goods = ref([])
 	let typeonename = ref('个护')
 	let typetwoname = ref("")
-	let getTypeOne = async () =>{
+	let GetTypeOne = async () =>{
 		let success = await getTypeOneName()
-		typeOneArr.value = success.data
+		// console.log(success);
+		typeOneArr.value = success
 	}
-	getTypeOne()
+	GetTypeOne()
 	let getTypeOnename = (e) => {
-		// console.log(e);
 		typeonename.value = e
-	}
+		getTypeTwoGood()
+	} 
 	let getTypeTwoGood = async() => {
 		let success = await twogoods(typeonename.value)
-		typeTwoArr.value = success.data
+		typeTwoArr.value = success
 	}
 	getTypeTwoGood()
-	// let getGoods = async () {
-	// 	let success = await onegood(typeonename,typetwoname)
-	// 	goods.value = 
-	// }
-	// export default {
-	// 	data() {
-	// 		return {
-				
-	// 		}
-	// 	},
-	// 	methods: {
-			
-	// 	}
-	// }
 </script>
 
 <style scoped>

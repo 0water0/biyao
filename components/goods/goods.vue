@@ -1,8 +1,21 @@
 <template>
-	<view>
-		{{typeonename}}
-		<!-- {{typetwoname}} -->
-		<button>123</button>
+	<view style="width: 100vh;">
+		<view class="good_title">
+			<view class="good_title_left">
+				{{typetwoname}}
+			</view>
+			<view class="good_title_rg">
+				更多>
+			</view> 
+		</view>
+		<view class="goods_ul">
+			<view class="goods_li" @click="godetail(item.Id)" v-for="(item, index) in arr" :key="index">
+				<image :src="item.imageUrl" mode="widthFix"></image>
+				<view class="good_name">
+					{{item.title}}
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -21,7 +34,7 @@
 // 	 onLoad(options) {
 // 		 console.log(options);
 // 	 }
-import {onegood} from '../../apis/api_method.js'
+import {onegood} from '../../pages/apis/api_method.js'
  export default {
   name:"goods",
   data() {
@@ -41,19 +54,23 @@ import {onegood} from '../../apis/api_method.js'
   },
   methods: {
 	  getGoods() {
-		  console.log(this.data.arr);
+		  // console.log(this.$props.typeonename, this.$props.typetwoname);
+		  onegood(this.$props.typeonename, this.$props.typetwoname).then(r=>{
+			  this.arr = r
+		  })
+	  },
+	  godetail(id) {
+		  uni.navigateTo({
+		  	url: '/pages/detail/detail?id=' + id,
+		  })
 	  }
-  }
- //  mounted() {
-	// let getGood = async() => {
-	// 	let success = await onegood(this.$props.typeonename, this.$props.typetwoname)
-	// 	this.data.arr = success.data
-	// }
-	// getGood()
- //  }
+  },
+ created() {
+	 this.getGoods()
+ }
  }
 </script>
 
-<style>
-
+<style scoped>
+@import url('./good.scss');
 </style>
