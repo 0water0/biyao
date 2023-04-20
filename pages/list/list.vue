@@ -3,7 +3,10 @@
 		<view class="search">
 			<view class="input">
 				<uni-icons class="icon_search" custom-prefix="iconfont" type="icon-search" size="25"></uni-icons>
-				<input type="text" placeholder="请输入您想要的商品">
+				<view class="ipt" @click="gosearch">
+					请输入您想要的商品
+				</view>
+				<!-- <input type="text" placeholder="请输入您想要的商品"> -->
 			</view>
 		</view>
 		<view class="good">
@@ -54,6 +57,11 @@
 		typeTwoArr.value = success
 	}
 	getTypeTwoGood()
+	let gosearch = () =>{
+		uni.navigateTo({
+			url:'/pages/search/search'
+		})
+	}
 </script>
 
 <style scoped>

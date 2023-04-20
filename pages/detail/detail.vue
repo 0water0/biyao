@@ -16,13 +16,54 @@
 				</view>
 				<view class="flex">
 					<view class="fukuan">
+						<uni-icons custom-prefix="iconfont" type="icon-huabei" size="13"></uni-icons>
 						支持花呗分期付款
 					</view>
 					<view class="live">
-						<uni-icons type="heart" />收藏
+						<uni-icons type="heart" size="15" />收藏
 					</view>
 				</view>
 			</view>
+			<view class="supper_flex">
+				<view class="supper">
+					{{item.supplier}}
+				</view>
+				<view class="lead">
+					生产周期: {{item.leadTime}}天
+				</view>
+			</view>
+			<view class="goodtitle">
+				{{item.title}}
+			</view>
+			<view class="goodsalePoint">
+				{{item.salePoint}}
+			</view>
+			<view class="goodad">
+				<view class="goodad_item">
+					<uni-icons custom-prefix="iconfont" type="icon-wancheng" size="13" />
+					<text>7天无忧退货</text>
+				</view>
+				<view class="goodad_item">
+					<uni-icons custom-prefix="iconfont" type="icon-wancheng" size="13" />
+					<text>先行赔付</text>
+				</view>
+				<view class="goodad_item">
+					<uni-icons custom-prefix="iconfont" type="icon-wancheng" size="13" />
+					<text>超时赔偿</text>
+				</view>
+				<view class="goodad_item">
+					<uni-icons custom-prefix="iconfont" type="icon-wancheng" size="13" />
+					<text>顺丰包邮</text>
+				</view>
+				<view class="goodad_item">
+					<uni-icons type="more-filled"></uni-icons>
+				</view>
+			</view>
+			<view class="line"></view>
+			<view class="">
+				
+			</view>
+			<view class="line"></view>
 		</view>
 	</view>
 </template>
@@ -41,16 +82,13 @@
 				gooddetail(id).then(r=>{
 					console.log(r);
 					this.arr = r
-					// console.log(r[0]);
-					// this.images = JSON.parse(r.data[0].imgs)
-					// console.log(this.images);
+					this.images = JSON.parse(r[0].imgs)
 				})
 			}
 		},
 		created() {
 		},
 		onLoad(options) {
-			// console.log(options);
 			this.getDetail(options.id)
 		}
 	}
@@ -58,4 +96,5 @@
 
 <style>
 @import url('./detail.scss');
+@import "@/static/iconfont.css";
 </style>

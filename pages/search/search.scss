@@ -1,0 +1,26 @@
+.search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90rpx;
+	background-color: #fff;
+	width: 90vw;
+	margin: 0 auto;
+}
+.middle {
+	width: 80%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: #f4f4f4;
+	height: 60rpx;
+	border-radius: 25rpx;
+	padding-left: 20rpx;
+}
+.middle input {
+	padding-left: 20rpx;
+}
+
+.right {
+	color: #7F4395;
+}

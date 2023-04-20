@@ -1,0 +1,30 @@
+{
+  "id": "4025476",
+  "name": "必要移动text",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8721202",
+      "name": "完成",
+      "font_class": "wancheng",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "14055537",
+      "name": "花呗",
+      "font_class": "huabei",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "7009042",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e741",
+      "unicode_decimal": 59201
+    }
+  ]
+}

@@ -5,4 +5,63 @@
 	width: 750rpx;
 	height: 750rpx;
 }
-.good_price {}
+.good_price {
+	display: flex;
+	font-size: 35rpx;
+	padding-left: 40rpx;
+}
+.prc {
+		color: #FF3637;
+		font-size: 45rpx;
+	}
+.flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30rpx;
+	font-size: 24rpx;
+	vertical-align: middle;
+}
+.supper_flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24rpx;
+	width: 90vw;
+	margin: 20rpx auto;
+	color: #ccc;
+}
+.supper {
+	color: #BF9E6B;
+}
+.goodtitle {
+	font-size: 40rpx;
+	padding-left: 30rpx;
+	margin-top: 30rpx;
+}
+.goodsalePoint {
+	font-size: 28rpx;
+	padding-left: 30rpx;
+	color: #ccc;
+	margin-top: 20rpx;
+}
+.goodad {
+	background-color: #FFFBF2;
+	color: #CDB7A8;
+	display: flex;
+	width: 100vw;
+	height: 50rpx;
+	font-size: 24rpx;
+	justify-content: space-around;
+	align-items: center;
+	margin: 30rpx auto 0; 
+}
+.goodad text {
+	margin-left: 10rpx;
+}
+.line {
+	width: 100vw;
+	height: 20rpx;
+	background-color: #F4F4F4;
+}
